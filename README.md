@@ -82,9 +82,6 @@ print(f'Found {len(tags)} suspicious characters')
 # Find HTML comments with instructions
 grep -rE '<!--.*curl|<!--.*exec|<!--.*\$\(' .
 
-# Find CSS-hidden content
-grep -riE 'display:\s*none|visibility:\s*hidden|left:\s*-[0-9]+' .
-
 # Search for exfiltration patterns
 grep -rE 'curl.*\$\(cat|wget.*--post|base64.*POST' .
 
